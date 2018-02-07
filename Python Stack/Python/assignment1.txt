@@ -1,0 +1,29 @@
+//text file for python assignment 1
+
+pip installs Django==1.11.9
+    this calls pip, the module handler, to install django with the version number 1.11.9
+
+
+pip list
+
+this call lists packages that are not dependencies of installed packages and their versions in paratheses
+
+pip install Django==1.11.9
+
+when we run this a second time - the console tells us that the requirement is already satisfied in the certain path
+  it says we have already satisfied the python27/ lib site packages in django
+
+pip freeze
+  this call outputs the installed packages in requirements format . pip list lists everything while pip freeze isntalls everything installed by pip
+
+  pip list includes editables -- pip freeze does not
+
+  When I ran pip freeze > requirements.txt from my desktop nothing happened nor when I did ls
+
+  pip uninstall Django - uninstalls all the parts of the django package
+  and asks us to proceed with a y or n prompt
+
+   pip show Django - returns nothing because Django was successfully uninstalled
+    in general , pip show shows information about one or more installed packages
+
+   pip search Flask - runs throught all the all python packages whose naem or summary contains "Flask"

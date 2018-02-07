@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users Form </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+$('form').submit(function(){
+
+  $('#dataTable').append('<tr>'+'<td>'+ $('#first_name').val() +
+'</td><td>' + $('#last_name').val() + '</td><td>' + $('#email').val()
++ '</td><td>' + $('#contact').val() + '</td>');
+return false;
+});
+
+});
+
+</script>
+  </head>
+  <body>
+    <table>
+    <tr>
+      <th> First Name</th>
+      <th> Last Name</th>
+      <th> Email Address</th>
+      <th> Contact #</th>
+    </tr>
+  </table>
+<table border="1" id="dataTable">
+
+</table>
+
+
+    <h1> Add User </h1>
+
+    <form>
+      First Name<input type="text" id="first_name" placeholder="First Name">
+      Last Name<input type="text" id="last_name" placeholder="Last Name">
+      Email Address<input type="text" id="email" placeholder="Email Address">
+      Contact No.<input type="text" id="contact" placeholder="Phone #">
+
+      <input type='submit' id="submit" value='submit'>
+
+    </form>
+
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hover In and Out </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+    $('img').hover(function(){
+      $(this).attr('src', 'pic2.jpg');
+    }, function(){
+      $(this).attr('src', 'paris.jpg');
+    });
+
+  });
+</script>
+
+  </head>
+  <body>
+    <img src="paris.jpg" alt="paris" >
+
+    <img src="paris.jpg" alt="paris" >
+
+    <img src="paris.jpg" alt="paris" >
+
+    <img src="paris.jpg" alt="paris" >
+
+  </body>
+</html>

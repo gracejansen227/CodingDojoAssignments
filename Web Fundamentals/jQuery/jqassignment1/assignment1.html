@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Assignment 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+        $(document).ready(function(){
+          $('.buttons button').click(function(){
+            $(this).css('background', 'none');
+            });
+
+
+          $('#reset').click(function(){
+            $('.buttons button').css('background', 'url(cutebunny.jpg)');
+            $('.buttons button').css('background-position', 'center');
+
+          });
+
+        });
+
+
+    </script>
+
+  </head>
+  <body>
+  <div class="buttons">
+    <button />
+    <button  ... />
+    <button  ... />
+    <button ... />
+    <button  ... />
+    <button ... />
+    <button  ... />
+    <button  ... />
+  </div>
+    <button id="reset">Reset</button>
+
+  </body>
+</html>

@@ -1,0 +1,109 @@
+/*CSS reset settings here*/
+*{
+ margin: 0px;
+ padding: 0px;
+}
+
+#wrapper{
+ width: 970px;
+ background-color: rgb(33, 66, 119);
+ margin: 0px auto;
+ display: inline-block;
+
+}
+#header{
+ height: 40px;
+ background-color: rgb(232, 46, 55);
+ border-radius: 14px;
+ margin-top: 13px;
+ margin-left: 13px;
+ margin-right: 13px;
+ padding: 10px;
+}
+
+#header h1{
+  color: white;
+}
+
+#navigation{
+ height: 300px;
+ width: 178px;
+ background-color: rgb(52, 141, 153);
+ margin-top: 20px;
+ display: inline-block;
+ border-radius: 14px;
+ margin-left: 10px;
+ padding-left: 20px;
+padding-top: 20px;
+}
+
+#navigation a{
+  color: lightblue;
+  text-align: 'center';
+  padding: 10px;
+}
+
+#navigation ul{
+  margin: 10px;
+}
+
+#navigation a l li{
+  //add add empty bullet point
+}
+#main_content{
+ height: 750px;
+ width: 700px;
+ background-color: black;
+ float: right;
+ display: inline-block;
+ margin-top: 20px;
+ padding-left:20px;
+ border-radius: 14px;
+ margin-right: 13px;
+ margin-left: 0px;
+}
+
+#main_content h2{
+  color: lightblue;
+  justify-content: center;
+  margin: 10px;
+}
+
+#main_content p{
+  color: lightblue;
+  margin: 10px;
+}
+
+
+#main_content ul li a{
+  color: lightblue;
+  margin: 10px;
+}
+
+#main_content ul li{
+  color: white;
+  padding: 10px;
+}
+
+#main_content p{
+  color: white;
+}
+
+span {
+  color: purple;
+}
+#advertisement{
+ height: 25px;
+ width: 925px;
+ background-color: gray;
+display: inline-block;
+ margin-top: 20px;
+ border-radius: 14px;
+ margin-left: 13px;
+ padding: 10px;
+ margin-bottom: 10px;
+}
+
+#advertisement p a{
+  color: aqua;
+}

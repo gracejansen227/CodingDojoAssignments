@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Functions Practice Assignment</title>
+    <style>
+      .selected {
+        background: green;
+      }
+
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("#slidetoggle").click(function(){
+            $("#bunny").slideToggle( "slow", function(){
+
+            });
+          });
+
+          $("#class").click(function(){
+            $('#firstClass p').css('background-color','red');
+          });
+
+
+          $("#appendButton").click(function(){
+            $('.result').append('<p>Hey hey hey if this works that would be dope</p>');
+          });
+
+          $("#hide").click(function(){
+            $('#hideandshow img').hide();
+          });
+
+          $("#show").click(function(){
+            $('#hideandshow img').show();
+          });
+
+          $('#togglebutton').click(function(){
+            $('#toggle img').toggle();
+          });
+
+          $('#slidedown').click(function(){
+            $('#slidefade img').slideDown();
+          });
+
+          $('#slideup').click(function(){
+            $('#slidefade img').slideUp();
+          });
+
+          $('#fadein').click(function(){
+            $('#slidefade img').fadeIn();
+          });
+
+          $('#fadeout').click(function(){
+            $('#slidefade img').fadeOut();
+          });
+
+          $('#classChange').click(function(){
+            $('#addClass p').addClass("selected");
+          });
+
+          $('#before').click(function(){
+            $('#beforeAfter p').before("<p> ADDED THIS BEFORE </p>");
+          });
+
+          $('#after').click(function(){
+            $('#beforeAfter p').after("<p> ADDED THIS AFTER </p>");
+          });
+
+          $('#html button').click(function(){
+            $('#html p').html('</h4> This is now a label </h4>');
+          });
+
+          $('#attr button').click(function(){
+            $('#attr img').attr('width',' 300px');
+          });
+
+          $('#val input').keyup(function(){
+            var value = $(this).val();
+            $("#val h4").text(value);
+          })
+          .keyup();
+
+          $('#data button').click(function(){
+
+          $('#data').data("myvalues", {first: 4, last: "hot cheetos BIIITTCHHH!" });
+            $('#data p:first').text( $("#data").data("myvalues").first );
+            $('#data p:last').text( $("#data").data("myvalues").last );
+          });
+
+        });
+
+    </script>
+  </head>
+  <body>
+    <div id="firstClass">
+      <h2> CSS </h2>
+
+      <button id="class"> AddClass</button>
+      <p> Click the button to add class 'red' to this paragraph</p>
+
+    </div>
+
+    <div id="slidetoggle">
+      <h2> Slidetoggle</h2>
+      <img src="bunny.jpg" alt="mydog" width= "100px" height= "auto" id="bunny" />
+
+      <button id="slidetoggle"> Slidetoggle</button>
+
+      <p> Click the button to slidetoggle a hidden image</p>
+
+    </div>
+
+    <div id="append">
+      <h2> Append </h2>
+
+      <button id="appendButton"> Append</button>
+
+      <p> Click the button to append a new paragraph!</p>
+      <div class='result'></div>
+
+    </div>
+
+        <div id="hideandshow">
+          <h2> Hide and Show </h2>
+          <img src="bunny.jpg" alt="mydog" width= "100px" height= "auto"/>
+          <button id="hide"> Hide</button>
+            <button id="show"> Show</button>
+
+          <p> Click the buttons to hide or show image</p>
+
+
+        </div>
+
+        <div id="toggle">
+          <h2> Toggle </h2>
+          <img src="bunny.jpg" alt="mydog" width= "100px" height= "auto"/>
+          <button id="togglebutton"> Toggle</button>
+
+
+          <p> Click the buttons to toggle image</p>
+
+        </div>
+
+        <div id="slidefade">
+          <h2> Slide Down, Slide Up, Fade in, Fade Out </h2>
+          <img src="bunny.jpg" alt="mydog" width= "100px" height= "auto"/>
+          <button id="slidedown"> Slide Down</button>
+          <button id="slideup"> Slide Up</button>
+          <button id="fadein"> Fade In</button>
+          <button id="fadeout"> Fade Out</button>
+
+
+          <p> Click the buttons to slide up or down, or fade in or out of image</p>
+        </div>
+
+        <div id="addClass">
+          <h2> Add Class </h2>
+          <p> We are gonna change the class of this paragraph to .selected </p>
+          <button id="classChange"> Add Class Here </button>
+        </div>
+
+        <div id="beforeAfter">
+          <h2> Before and After </h2>
+
+          <p> We are going to add another line of text before every one of these lines </p>
+
+          <p> We are going to add another line of text before every one of these lines </p>
+
+          <p> We are going to add another line of text before every one of these lines </p>
+
+          <button id="before"> Before </button>
+          <button id="after"> After </button>
+
+        </div>
+
+        <div id="html">
+          <h2> Html </h2>
+
+          <button> HMTL </button>
+          <p> We are gonna replace this with another header </p>
+
+        </div>
+
+        <div id="attr">
+          <h2> Attr </h2>
+
+            <img src="bunny.jpg" alt="mydog" width= "100px" height= "auto" id="bunny" />
+
+          <button> Attr </button>
+
+          <p> We add a larger width attribute to the img </p>
+
+        </div>
+
+        <div id="val">
+          <h2> Val and Text</h2>
+
+          <p> Input some text and we will pass that value to the empty paragraph below </p>
+
+          <input type="text" value="Input your own text here!" >
+
+          <h4> </h4>
+        </div>
+
+        <div id="data">
+            <h2> Data </h2>
+            This value is how many days left in the week:
+            <p> </p> and this is my favorite food: <p> </p>
+
+          <button> Add values!</button>
+
+        </div>
+
+
+        </div>
+
+
+  </body>
+</html>

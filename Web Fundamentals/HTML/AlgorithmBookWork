@@ -1,0 +1,15 @@
+//Chapter 1 Fundamentals
+// Grace Jansen
+
+//page 16
+
+Setting and Swapping:
+
+var myNumber = 42;
+var myName =' Grace';
+
+temp = myNumber;
+myNumber = myName;
+myName = temp;
+
+Print 52 to 1066:

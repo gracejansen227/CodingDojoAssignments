@@ -1,0 +1,48 @@
+/* CSS styles below */
+
+
+
+#square {
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+    display: inline-block;
+
+
+
+}
+
+#circle {
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  border-radius: 50px;
+
+}
+
+#uptriangle {
+  width: 0px;
+  height: 0px;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid blue;
+  display: inline-block;
+
+}
+
+#pacman {
+  display: inline-block;
+  height: 0px;
+  width: 0px;
+  border-left: 60px solid blue;
+  border-top: 60px solid blue;
+  border-bottom: 60px solid blue;
+  border-right: 60px solid transparent;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+
+
+}

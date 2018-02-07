@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Functions Practice Assignment</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("#slidetoggle").click(function(){
+            $("#bunny").slideToggle( "slow", function(){
+
+            });
+          });
+
+          $("#class").click(function(){
+            $('#firstClass p').css('background-color','red');
+          });
+          //insert ya bad ass jQuery here ya damn BEAST :)
+
+          $("#appendButton").click(function(){
+            $('.result').append('<p>Hey hey hey if this works that would be dope</p>');
+          });
+
+        });
+    </script>
+  </head>
+  <body>
+    <div id="firstClass">
+      <h2> AddClass </h2>
+
+      <button id="class"> AddClass</button>
+      <p> Click the button to add class 'red' to this paragraph</p>
+
+    </div>
+
+    <div id="slidetoggle">
+      <h2> Slidetoggle</h2>
+      <img src="bunny.jpg" alt="mydog" width= "100px" height= "auto" id="bunny" />
+
+      <button id="slidetoggle"> Slidetoggle</button>
+
+      <p> Click the button to slidetoggle a hidden image</p>
+
+    </div>
+
+    <div id="append">
+      <h2> Append </h2>
+
+      <button id="appendButton"> Append</button>
+
+      <p> Click the button to append a new paragraph!</p>
+      <div class='result'></div>
+
+
+    </div>
+
+
+  </body>
+</html>

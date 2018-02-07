@@ -1,0 +1,218 @@
+/*CSS reset settings here*/
+*{
+ margin: 0px;
+ padding: 0px;
+}
+
+#background{
+ width: 970px;
+ background: linear-gradient(rgb(60, 45, 68) ,rgb(123, 97, 137));;
+ margin: 0px auto;
+ display: inline-block;
+ height: 871px;
+ padding: 10px;
+ padding-top: 20px;
+
+}
+#header{
+ height: 40px;
+ background-color: lightgray;
+ padding: 10px;
+ width: 970px;
+
+}
+
+#header h1{
+  color: black;
+  display: inline-block;
+  margin-right: 500px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+
+}
+
+#header h3 {
+  font-size: 100%;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+#photo{
+ height: 330px;
+ width: 500px;
+ background-color: gray;
+ display: inline-block;
+ margin-left: 10px;
+ padding: 5px;
+ margin-bottom: 10px;
+}
+
+ #photo img{
+    width: 500px;
+  height: auto;
+}
+
+.mode img{
+  width: 302px;
+  height: auto;
+}
+
+.mode h3, h4 {
+  background: linear-gradient(gray,silver);
+  color: white;
+  padding: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact img{
+  width: 302px;
+  height: auto;
+}
+
+.contact h3, h4 {
+  background: linear-gradient(gray,silver);
+  color: white;
+  padding: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fiveEleven img{
+    width: 302px;
+  height: auto;
+}
+
+.fiveEleven h3, h4 {
+  background: linear-gradient(gray,silver);
+  padding: 3px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#about{
+ height: 340px;
+ width: 400px;
+background: linear-gradient(lightgray,silver);
+ float: right;
+ display: inline-block;
+padding-right: 15px;
+ margin-right: 13px;
+ margin-left: 0px;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+#about h3 {
+  background: linear-gradient(gray,silver);
+  padding: 3px;
+  color: white;
+  width: 410px;
+
+}
+
+#about p{
+  padding: 10px;
+  font-size: 110%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mode {
+  display: inline-block;
+  background: linear-gradient(lightgray, white);
+  height: 500px;
+  width: 302px;
+  margin-left: 10px;
+  margin-right: 15px;
+  vertical-align: top;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 85%;
+}
+
+.mode p{
+    padding: 8px;
+    margin-bottom: 50px;
+}
+
+.contact {
+  display: inline-block;
+  background: linear-gradient(lightgray, white);
+  height: 500px;
+  width: 302px;
+  margin-right: 15px;
+  vertical-align: top;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 85%;
+}
+
+.contact p{
+    padding: 8px;
+    margin-bottom: 32px;
+}
+
+.fiveEleven {
+  display: inline-block;
+  background: linear-gradient(lightgray, white);
+  height: 500px;
+  width: 302px;
+  margin-right: 15px;
+  vertical-align: top;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 85%;
+
+}
+
+.fiveEleven p{
+    padding: 8px;
+}
+
+.tech {
+  padding: 10px;
+}
+
+.tech p{
+  text-align: center;
+  background-color: teal;
+  border-color: black;
+  border-width: 4px;
+  border-radius: 15px;
+  width: 140px;
+  font-weight: bold;
+  margin-left: 60px;
+  height: 13px;
+  color: white;
+   box-shadow: 3px 3px 3px grey;
+
+
+}
+
+.tech img{
+  display: inline-block;
+  width: 45px;
+  height: auto;
+}
+
+
+#footer{
+ height: 60px;
+ width: 970px;
+ background-color: lightgray;
+margin-top: 20px;
+margin-left: -70px;
+padding: 40px;
+
+}
+
+#footer p {
+  text-align: center;
+}
+
+#footer img {
+  width: 20px;
+  height: auto;
+}
+
+#footer span {
+  text-decoration-line: underline;
+  font-style: italic;
+
+}

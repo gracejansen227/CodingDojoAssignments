@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Accordion and Tab jQuery UI Practice</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+      <link rel="stylesheet" href="/resources/demos/style.css">
+
+
+      <style>
+          #tabs{
+            width: 800px;
+            margin: 0 auto;
+          }
+          #accordion{
+            width: 805px;
+              margin: 0 auto;
+          }
+          #spacer{
+            height: 50px;
+          }
+          #wholecontainer{
+            width: 1000px;
+            min-height: 900px;
+            background-color: pink;
+            margin: 0 auto;
+            padding-bottom:20px;
+          }
+      </style>
+
+      <script>
+      $(function() {
+        $( "#tabs" ).tabs();
+      });
+      $(function() {
+        $( "#accordion" ).accordion();
+      });
+      </script>
+
+  </head>
+  <body>
+    <div id="accordion">
+      <h3> Page ONe </h3>
+        <div> <p>whats up bro</p> </div>
+      <h3> Page Two </h3>
+          <div> <p>whats up bro</p> </div>
+
+      <h3> Page Three </h3>
+          <div><p> whats up bro</p> </div>
+
+    </div>
+
+    <div id="tabs">
+      <ul>
+        <li><a href="#fragment-1">One</a></li>
+        <li><a href="#fragment-2">Two</a></li>
+        <li><a href="#fragment-3">Three</a></li>
+      </ul>
+      <div id="fragment-1">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+      </div>
+      <div id="fragment-2">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+      </div>
+      <div id="fragment-3">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+      </div>
+    </div>
+
+
+
+
+  </body>
+</html>

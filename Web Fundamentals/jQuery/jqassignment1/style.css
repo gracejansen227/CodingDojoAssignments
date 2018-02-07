@@ -1,0 +1,23 @@
+button {
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+  background: url('cutebunny.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#reset {
+  width: 100px;
+  height: 30px;
+  background: none;
+  background-color: lightblue;
+}
+
+#blank {
+  width: 250px;
+  height: 250px;
+
+  background: white;
+
+}
