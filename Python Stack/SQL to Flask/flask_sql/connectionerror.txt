@@ -1,0 +1,21 @@
+#MySQL Connection Errors
+
+ProgrammingError:  (1045, "Access denied for user 'hooters'@'localhost' (using password: YES)")
+fix: make sure your user name is 'root'
+
+ProgrammingError:  (2003, "Can't connect to MySQL server on '127.0.0.1' (10061)")
+fix: change port back to 3306
+
+ProgrammingError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+fix: changed password back to 'root'
+
+ProgrammingError:    mysql = MySQLConnector(app, 'twitter')
+  File "C:\Users\Grace\Desktop\Coding Dojo Assignments\Python Stack\SQL to Flask\flask_sql\mysqlconnection.py", line 40, in MySQLConnector
+    return MySQLConnection(app, db)
+  File "C:\Users\Grace\Desktop\Coding Dojo Assignments\Python Stack\SQL to Flask\flask_sql\mysqlconnection.py", line 9, in __init__
+    'database': GRACIESdb, # we got db as an argument
+NameError: global name 'GRACIESdb' is not defined
+
+fix: changed database to 'GRACEDB' -- need to change back to 'db' just as the argument
+
+ProgrammingError: changed localhost to localpost... no error?!?!

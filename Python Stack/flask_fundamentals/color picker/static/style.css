@@ -1,0 +1,16 @@
+p {
+  color: red;
+
+}
+
+form input {
+  display: inline-block;
+  width: 300px;
+  vertical-align: top;
+  margin-right: 400px;
+  margin-bottom: 10px;
+}
+
+#background {
+  padding: 10px;
+}

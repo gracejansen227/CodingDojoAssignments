@@ -1,0 +1,27 @@
+<html>
+  <head>
+
+    <title>Result </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+      <h3> Results</h3>
+      <div id="reg">
+      <h1>Registration</h1>
+
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <p> {{message}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+          E-mail: {{email}}
+          First Name: {{first_name}}
+          Last Name: {{last_name}}
+
+    </div>
+
+  </body>
+</html>

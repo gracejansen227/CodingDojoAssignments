@@ -1,0 +1,18 @@
+1. made a new connection and called the connection name local host
+the port was 3306
+username and password was both root
+
+2. did queries on twitter database
+
+use twitter
+
+SELECT *
+FROM users;
+
+SELECT user_id
+FROM users
+ORDER BY DESC
+
+SELECT user_id
+FROM users
+WHERE first_name LIKE "G%";

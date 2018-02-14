@@ -1,0 +1,27 @@
+form {
+  display: center;
+  width: 600px;
+  height: 600px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  margin: 10px;
+  padding: 10px;
+}
+
+input, select {
+  display: inline-block;
+  width: 390px;
+  margin-right: 100px;
+}
+
+p {
+  display: center;
+  width: 600px;
+  height: 600px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  margin: 10px;
+  padding: 10px;
+}

@@ -1,0 +1,29 @@
+body {
+width: 700px;
+height: 800px;
+text-align: center;
+
+}
+
+#wrong {
+  width: 400px;
+  height: 400px;
+  background-color: red;
+  color: white;
+  font-size: 150%;
+  text-align: center;
+}
+
+#right {
+  width: 400px;
+  height: 400px;
+  background-color: green;
+  color: white;
+  font-size: 150%;
+  text-align: center;
+  display: block;
+}
+
+#right button {
+
+}

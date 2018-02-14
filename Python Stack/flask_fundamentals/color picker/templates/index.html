@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Color Picker</title>
+    <style>
+    #background {
+      background-color: rgb({{red}}, {{green}}, {{blue}});
+      width: 600px;
+      height: 600px;
+    }
+    </style>
+
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div id='background'>
+    <h1> Enter your color values below: </h1>
+
+    <form action='/changeColor' method='post'>
+      Red: <input type="text" name='red'>
+
+      Green: <input type="text" name='green'>
+
+      Blue: <input type="text" name='blue'>
+
+      <input type='submit' value='Show my color!'>
+
+      <p> * All values must be between 1 and 255 </p>
+
+    </form>
+  </div>
+  </body>
+</html>

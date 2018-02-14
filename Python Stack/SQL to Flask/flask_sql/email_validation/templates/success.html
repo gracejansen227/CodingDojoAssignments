@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <title> Success Page </title>
+    </head>
+    <body>
+        <div id="wrapper">
+          <h3><u> Email Addresses Entered:</u> </h3>
+              {% for e in all_emails %}
+                <p> {{ e['email_address']}} {{ e['date_created']}} </p>
+              {% endfor %}
+
+        </div>
+    </body>
+</html>

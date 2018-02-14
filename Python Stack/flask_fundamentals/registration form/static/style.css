@@ -1,0 +1,13 @@
+#reg {
+  width: 500px;
+  height: 600px;
+  border: 2px solid green;
+  display: inline-block;
+  padding: 20px;
+}
+
+input {
+  margin-right: 390px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
