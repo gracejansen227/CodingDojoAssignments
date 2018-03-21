@@ -1,0 +1,22 @@
+
+#wrapper {
+  width: 700px;
+  height: 600px;
+}
+
+h2 {
+  display: inline-block;
+  width: 300px;
+}
+
+input {
+  display: inline-block;
+  width: 200px;
+}
+
+
+#displayCity {
+  display: inline-block;
+  width: 100px;
+
+}

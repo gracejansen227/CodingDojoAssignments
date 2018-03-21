@@ -1,0 +1,73 @@
+<html>
+    <head>
+       <title>Dojo Message Board</title>
+       <style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+input {
+    border: 1px solid #dddddd;
+    display: inline-block;
+    padding: 8px;
+}
+
+h1 {
+    background-color: #dddddd;
+}
+
+#comments {
+  display: inline-block;
+  width: 500px;
+  border: 2px solid lightpink;
+  padding: 10px;
+  margin: 20px;
+}
+
+#all_messages {
+  display: inline-block;
+  width: 700px;
+  border: 2px dashed pink;
+  padding: 10px;
+  margin: 20px;
+}
+</style>
+    </head>
+
+    <body>
+      <h1>The Dojo Message Board </h1>
+      <h3>Write a post! </h3>
+      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+      <form action='/new_post' method='post'>
+          Name: <input type='text' name='name'>
+
+          Message: <textarea name='text' name="post" cols=20 rows=10> </textarea>
+
+          <input type='submit' value='Post message'>
+      </form>
+
+
+
+            <div id="all_messages">
+              <% for (let i =0; i < posts.length; i++) { %>
+            <h3> <%="Name" + posts[i].name %> </h3>
+          <h4> <%= "Message" + posts[i].post %> </h4>
+
+          <div id="comments">
+            <% for( let j =0; j < posts[i].comments.length; j++) { %>
+              <h5> Name: <%= posts[i].comments[j].name %> </h5>
+            <h6> Comment: <%= posts[i].comments[j].comment %> </h6>
+            <% } %>
+          </div>
+            <form action='/new_comment/<%=posts[i]._id %>' method='post'>
+                  <h5> Post a comment </h5> <input id="comment" type='textarea' name='comment'>
+                  Name: <input id="name" type="text" name="name">
+                <input type='submit' value='Post a comment'>
+              </form>
+              <% } %>
+            </div>
+
+    </body>
+</html>

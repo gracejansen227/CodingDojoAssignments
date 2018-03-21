@@ -1,0 +1,17 @@
+<html>
+    <head>
+       <title>Quoting Dojo</title>
+    </head>
+
+    <body>
+      <h1>Quoting Dojo </h1>
+      <h2> Here are some mediocre overly used cliche quotes</h2>
+      <div id="all_quotes">
+        <% for (let i in quotes) { %>
+      <h3>"  <%= quotes[i].quote %> "</h3>
+    <h4> - <%= quotes[i].name %>  at  <%= quotes[i].createdAt %> </h4>
+        <% } %>
+
+      </div>
+    </body>
+</html>

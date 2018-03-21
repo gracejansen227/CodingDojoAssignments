@@ -1,0 +1,45 @@
+Create 3 different user accounts
+Have the first user create/upload 2 books.
+Have the second user create/upload 2 other books.
+Have the third user create/upload 2 other books.
+
+Have the first user like the last book and the first book
+
+book1.liked_users.add(User.objects.get(id=1))
+>>> lastbook.liked_users.add(User.objects.get(id=1)
+
+
+Have the second user like the first book and the third book
+>>> book1.liked_users.add(User.objects.get(id=2))
+>>> book3 = Book.objects.get(id=3)
+>>> book3.liked_users.add(User.objects.get(id=2))
+
+Have the third user like all books
+>>> book1.liked_users.add(user3)
+>>> Book.objects.get(id=2).liked_users.add(user3)
+>>> book3.liked_users.add(user3)
+
+Display all users who like the first book
+
+>>> book1.liked_users.all()
+<QuerySet [<User: User object>, <User: User object>, <User: User object>]>
+>>>
+
+Display the user who uploaded the first book
+
+>>> book1.uploader.first_name
+u'Brad'
+>>>
+
+Display all users who like the second book
+
+>>> book2 = Book.objects.get(id=2)
+>>> book2.liked_users.all()
+<QuerySet [<User: User object>]>
+>>>
+
+Display the user who uploaded the second book
+
+>>> book2.uploader.first_name
+u'Brad'
+>>>

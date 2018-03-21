@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Broadcast Example</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+        <script type ="text/javascript">
+             $(document). ready(function (){
+               var socket  = io.connect();
+
+               var input_name = prompt("Local host says: what is your name?", "write your name here!");
+                 if (confirm("Hello " + input_name +"! Click OK")) {
+                   // session.name = input_name;
+                   console.log(input_name);
+                   $('#user_name').append("<h2>" + input_name + "</h2>");
+
+                  } else {
+                    txt = "You pressed Cancel!";
+                    console.log(txt);
+                    }
+
+                $('#message').submit(function (){
+                  console.log($(this).serializeArray());
+                  var message = $(this).serializeArray()[0].value;
+                  var name = input_name;
+                  console.log(message, input_name);
+                  socket.emit("message_posted", {message: message, name: name});
+
+                  return false;
+                });
+
+                socket.on('server_response', function (data){
+                  console.log("this should be da message and username", data);
+                  $('#board').append("<h2> User " + data.name + " says: " +  data.message + "</h2>");
+                  });
+
+              })
+        </script>
+    </head>
+    <body>
+      <h3> Conversation Board </h3>
+      <div id="information">
+        <h2> <div id="user_name"></div> </h2>
+        <h4> Here i would put user name and shit </h4>
+
+      </div>
+      <div id="board">
+
+
+      </div>
+
+      <form action="" id="message">
+        <textarea name="message" rows="6" cols="50"></textarea>
+        <input type="submit" value="Post">
+      </form>
+
+
+    </body>
+</html>

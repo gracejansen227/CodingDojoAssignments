@@ -1,0 +1,64 @@
+>>> b = Book.objects.last()
+>>> b.name = "C#"
+>>> b.save()
+>>> c = Author.objects.last()
+>>> c.first_name = "Ketul"
+>>> c.save()
+>>> this_book = Book.objects.get(id=1)
+>>> this_author = Author.objects.get(id=1)
+>>> this_author.books.add(this_book)
+>>> this_author.books.add(Book.objects.get(id=2))
+>>> second_author = Author.objects.get(id=2)
+>>> third_book = Book.objects.get(id=3)
+>>> second_author.books.add(this_book)
+
+>>> second_author.books.add(Book.objects.get(id=2))
+>>> second_author.books.add(third_book)
+>>> third_author = Author.objects.get(id=3)
+>>> third_author.books.add(this_book)
+>>> third_author.books.add(third_book)
+>>> third_author.books.add(Book.objects.get(id=2))
+>>> third_author.books.add(Book.objects.get(id=4))
+>>> fourth_author = Author.objects.get(id=4)
+
+
+
+TypeError: int() argument must be a string or a number, not 'QuerySet'
+>>> fourth_author.books.add(this_book)
+>>> fourth_author.books.add(third_book)
+>>> fourth_author.books.add(Book.objects.get(id=2))
+>>> fourth_author.books.add(Book.objects.get(id=4))
+>>> book3 = Book.objects.get(id=3)
+>>> book3.authors.get(Author.objects.all())
+
+
+
+
+>>> book3.authors.remove(Author.objects.first())
+>>> book3.authors.remove(Author.objects.first())
+>>> book3.authors.remove(Author.objects.first())
+>>> book3.authors.remove(Author.objects.first())
+>>> Book.objects.get(id=3).authors.remove(Author.objects.first())
+
+
+//this actually worked
+>>> book3.authors.remove(Author.objects.get(id=2))
+>>>
+
+// for 2nd book, add the 5th author as one of the authors
+
+>>> book3.authors.remove(Author.objects.get(id=2))
+>>> disbook = Book.objects.get(id=2)
+>>> disbook.authors.add(Author.objects.get(id=5))
+>>>
+//find al lbooks that the 3rd author is part of
+
+>>> auturo3.books.all()
+<QuerySet [<Book: Book object>, <Book: Book object>, <Book: Book object>, <Book: Book object>]>
+>>>
+
+//find all books that the 2nd author is part of
+
+>>> auturo2.books.all()
+<QuerySet [<Book: Book object>, <Book: Book object>]>
+>>>

@@ -1,0 +1,23 @@
+<html>
+  <head>
+
+    <title>Result </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'survey/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+  </head>
+  <body>
+      <h3> Results</h3>
+      <p> Gracias for submitting thsi form! You have now submitted this form {{request.session.counter}} times now!
+        You fucking loser! </p>
+      <h4> Your information:</h4>
+      <p> {{ request.session.info.name}} </p>
+      <p> {{ request.session.info.location}}  </p>
+
+      <p> {{ request.session.info.language}} </p>
+
+      <p>  {{ request.session.info.comment}}  </p>
+
+
+      <a href="/survey/"> Go back! </a>
+  </body>
+</html>

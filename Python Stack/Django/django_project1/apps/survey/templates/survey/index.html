@@ -1,0 +1,34 @@
+<html>
+    <head>
+       <title>TOTALLY DIDN'T COPY THE FILES FROM MY OTHER DOJO SERVEY HEH HEH HEH </title>
+       {% load static %}
+       <link rel="stylesheet" href="{% static 'survey/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+     </head>
+    </head>
+
+    <body>
+      <h1>DJANGO Djojo Servey</h1>
+      <h3>Fill in the Following</h3>
+      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+      <form action="/survey/process" method='post'>
+        {% csrf_token %}
+          Your Name: <input type='text' name='name'>
+
+        Dojo Location:  <select name='location'>
+                          <option value="Dallas">Dallas</option>
+                          <option value="Silicon Valley">Silicon Valley</option>
+                          <option value="Los Angeles">Los Angeles</option>
+                          <option value="Paris">Paris</option>
+                        </select>
+        Favorite Language: <select name='language'>
+                            <option value="Python">Python</option>
+                            <option value="Javascript">Javascript</option>
+                            <option value="Django">Django</option>
+                            <option value="mySQL">mySQL</option>
+                          </select>
+          Comment (optional): <textarea name='comment' rows=10 cols=60 ></textarea>
+          {% csrf_token %}
+          <input type='submit' value='Submit'>
+      </form>
+    </body>
+</html>

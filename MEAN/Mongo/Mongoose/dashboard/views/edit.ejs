@@ -1,0 +1,57 @@
+<html>
+    <head>
+       <title>Show this Babayy!</title>
+       <style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+    </head>
+
+    <body>
+      <h1> EDIT this baby </h1>
+      <h3>Change some shit about this baby </h3>
+
+      <table>
+        <tr>
+        <th>Type </th>
+        <th> Name </th>
+        <th> Food</th>
+      </tr>
+
+        <tr>
+          <td> <%= baby[0].type %> </td>
+          <td><%= baby[0].name %> </td>
+          <td> <%= baby[0].food %></td>
+        </tr>
+
+      </table>
+
+      <h2> Change the following!</h2>
+      <form action='/edit/<%= baby[0]._id %>' method='post'>
+          Type: <input type="text" name="type">
+          Name: <input type='text' name='name'>
+
+          Food: <input type="text" name="food">
+          <input type='submit' value='submit!'>
+      </form>
+
+
+      <a href='/'>
+        Back to Dashboard
+      </a>
+
+    </body>
+</html>

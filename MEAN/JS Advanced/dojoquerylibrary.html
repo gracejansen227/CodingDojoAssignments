@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Dojo Query </title>
+  </head>
+  <body>
+    <h1 id="intro"> welcome to the dojo jungle </h1>
+    <script>
+      var $Dojo = function(id) {
+      var element =  document.getElementById(id);
+
+        console.log(element);
+
+      return {
+        click: function(callback) {
+          element.addEventListener('click', callback)
+        },
+        hover: function(callback) {
+          element.addEventListener('mouseover', callback)
+        }
+      }
+    }
+
+      //$Dojo('intro').click(function() { console.log("you done clickeed me.")});
+      $Dojo('intro').hover(function() {console.log("GET OUT MA FACE BOO!")});
+
+    </script>
+  </body>
+</html>

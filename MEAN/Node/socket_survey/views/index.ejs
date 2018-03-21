@@ -1,0 +1,57 @@
+<html>
+    <head>
+       <title>Dojo Survey</title>
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+       <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+       <script type ="text/javascript">
+            $(document). ready(function (){
+               // this triggers the connection event in our server!
+               var socket  = io.connect();
+
+               $('form').submit(function (){
+                 console.log($(this).serializeArray());
+                 var info = $(this).serializeArray();
+                 socket.emit("submit_clicked", {info: info});
+
+                 return false;
+               });
+               socket.on('server_response', function (name, location, language, comment, num, user_number){
+                  $('#information').append("<h3>" + name.name +" who is in "+ name.location + " adores the language " + name.language + " and want's to say..." + name.comment +"</h3>" + "<h4> Your lucky number emmitted by the server is " + name.num + " !</h4>");
+
+                 });
+               })
+       </script>
+    </head>
+
+    <body>
+      <h1>Dojo Survey</h1>
+
+      <div id="information">
+
+
+
+      </div>
+
+      <h3>Fill in the Following</h3>
+      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+      <form action=''>
+          Your Name: <input type='text' name='name'>
+
+        Dojo Location:  <select name='location'>
+                          <option value="Dallas">Dallas</option>
+                          <option value="Silicon Valley">Silicon Valley</option>
+                          <option value="Los Angeles">Los Angeles</option>
+                          <option value="Paris">Paris</option>
+                        </select>
+        Favorite Language: <select name='language'>
+                            <option value="Python">Python</option>
+                            <option value="Javascript">Javascript</option>
+                            <option value="Django">Django</option>
+                            <option value="mySQL">mySQL</option>
+                          </select>
+          Comment (optional): <textarea name='comment'></textarea>
+
+          <input type='submit' value='get info'>
+      </form>
+    </body>
+</html>

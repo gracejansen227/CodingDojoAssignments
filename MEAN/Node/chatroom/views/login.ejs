@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login for Chat Room</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script type ="text/javascript">
+       $(document). ready(function (){
+
+         var socket  = io.connect();
+
+             $('#login').submit(function (){
+               console.log($(this).serializeArray());
+               var name = $(this).serializeArray();
+               name =name[0].value;
+               console.log("this is supposed to be jst name", name);
+
+               socket.emit("submit_clicked", name);
+                 return false;
+               });
+
+          socket.on('server_response', function (user_name){
+            console.log("this user is logged in", user_name);
+            
+              });
+
+          $('#reset').submit(function (){
+            count = 0;
+            console.log(count);
+            socket.emit("reset_clicked", {count: count});
+
+            return false;
+          });
+        });
+
+
+  </script>
+</head>
+<body>
+	<div class="container">
+		<form action="" id="login">
+			<div>
+				<label>Enter your name</label>
+				<input type="text" name="name">
+			</div>
+			<input type="submit" value="Login">
+		</form>
+	</div>
+</body>
+</html>

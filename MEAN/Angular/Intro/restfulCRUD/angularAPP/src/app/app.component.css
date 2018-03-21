@@ -1,0 +1,11 @@
+#taskList h3 {
+  border: 2px solid lightblue;
+  padding: 10px;
+  align-content: left;
+}
+
+#taskList {
+  display: inline-block;
+  width: 550px;
+  length: 550px;
+}

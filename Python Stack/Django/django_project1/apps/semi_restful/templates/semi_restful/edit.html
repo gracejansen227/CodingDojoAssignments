@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Edit Users</title>
+  </head>
+  <body>
+    <div id="wrapper">
+    <h1> Edit User {{user_id}} </h1>
+
+    <form action="/semi_restful/{{user_id}}/edit" method="post">
+        {% csrf_token %}
+      First name: <input name="first_name" type="text">
+      Last name: <input name="last_name" type="text">
+      Email: <input name="email" type="text">
+    <input type="submit" value="Edit/Update">
+  </form>
+
+    <a href="/semi_restful/{{user_id}}/show"> Show</a>  |    <a href="/semi_restful"> Go Back</a>
+  </div>
+  </body>
+</html>

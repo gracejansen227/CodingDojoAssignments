@@ -1,0 +1,11 @@
+li {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+}
+
+a {
+  color: pink;
+  text-decoration: none;
+  text-shadow: 1px 1px lightgray;
+}

@@ -1,0 +1,21 @@
+
+#wrapper{
+  width: 900px;
+  height: 900px;
+}
+
+img {
+  display: inline;
+  width: 200px;
+  height: auto;
+}
+
+#details {
+  display: inline-block;
+  text-align: center;
+  width: 500px;
+  height: 400px;
+  border: 2px solid black;
+  padding: 10px;
+
+}

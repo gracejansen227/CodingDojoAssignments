@@ -1,0 +1,42 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    CRUD restful tasks!
+  </h1>
+<h2> Task List:</h2>
+<div id="taskList">
+  <h3 *ngFor="let task of tasks"> {{task.title}} - {{task.description}} 
+  <button (click)="onButtonClickEdit(task._id)">EDIT</button>
+  <button (click)="onButtonClickDelete(task._id)">DELETE</button></h3>
+  <!-- <button (click)="onButtonClickEdit()">EDIT</button> -->
+</div>
+
+  <h3 *ngIf="editThis"> EDIT this one!
+  <form (submit)="onEdit()" class="postForm">
+    <p> {{editTask | json}}</p>
+    <label> Edit title:
+      <input type="text" name="editTask.title" [(ngModel)]="editTask.title" [value]="title"/>
+    </label>
+
+    <label> Edit description:
+      <input type="text" name="editTask.description" [(ngModel)]="editTask.description" [value]="description"/>
+    </label>
+    <input type="submit" value="Update!" />
+  </form>
+  </h3>
+
+
+<h2> Create a new task </h2>
+<form (submit)="onSubmit()" class="postForm">
+  <p> {{newTask | json}}</p>
+  <label> Task title:
+    <input type="text" name="newTask.title" [(ngModel)]="newTask.title" />
+  </label>
+
+  <label> Task description:
+    <input type="text" name="newTask.description" [(ngModel)]="newTask.description" />
+  </label>
+  <input type="submit" value="Create New Task" />
+</form>
+
+</div>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel='stylesheet' type='text/css' href='styles.css'>
+    <title>Login and Registration Mongoose Advanced</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Register</h1>
+        <div class="register">
+            <form action="/register" method='post'>
+                <div>
+                    <label> First Name</label>
+                    <input type="text" name='first_name'>
+                </div>
+                <div>
+                    <label>Last Name</label>
+                    <input type="text" name='last_name'>
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="text" name='email'>
+                </div>
+                <div>
+                  <label> Birthday</label>
+                  <input type="date" name="birthday">
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" name='password'>
+                </div>
+                <div>
+                    <label> Confirm password </label>
+                    <input type="password" name='confirm'>
+                </div>
+                <input type="submit" value='Register'>
+            </form>
+            <div id="reg_error">
+              <% if (typeof(errors) != 'undefined'){ %>
+              <% for ( let i in errors) { %>
+              <%= errors[i].message %>
+              <% }} %>
+        </div>
+      <hr>
+        <h1>Login</h1>
+        <div class="login">
+            <form action="/login" method='post'>
+                <div>
+                    <label>Email</label>
+                    <input type="text" name='email'>
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" name='password'>
+                </div>
+                <input type="submit" value='Login'>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

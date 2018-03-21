@@ -1,0 +1,53 @@
+<html>
+    <head>
+       <title>Dashboard</title>
+       <style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+    </head>
+
+    <body>
+      <h1>Dashboard for Bebes </h1>
+      <h3>Here is a beautiful list of all da kinds of bebes we have for rent.</h3>
+
+      <table>
+        <tr>
+        <th>Type </th>
+        <th> Name </th>
+        <th> Food</th>
+        <th> Show </th>
+        <th> Edit </th>
+        <td> Delete </th>
+      </tr>
+        <% for (let i in babies){ %>
+        <tr>
+          <td> <%= babies[i].type %> </td>
+          <td><%= babies[i].name %> </td>
+          <td> <%= babies[i].food %></td>
+          <td> <a href="/show/<%=babies[i]._id%>">Show</a></td>
+          <td> <a href="/edit/<%=babies[i]._id%>">Edit</a></td>
+          <td> <a href="/delete/<%=babies[i]._id%>">Delete</a></td>
+        </tr>
+          <% } %>
+      </table>
+      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+      <a href='/new'>
+        Create a new baby!
+      </a>
+
+    </body>
+</html>

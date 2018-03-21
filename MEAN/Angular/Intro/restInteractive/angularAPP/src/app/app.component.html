@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Restful Tasks Interactive!
+  </h1>
+<h2> Here are the all tasks:</h2>
+<button (click)="onButtonClickAll()">Click to get all tasks</button>
+  <h3 *ngFor="let task of tasks">Tasks: {{task.title}} </h3>
+
+<h2> Here is one lil task </h2>
+<button (click)="onButtonClickOne()"> Click to get one task</button>
+    <h3>{{oneTask[0]?.title}} </h3>
+
+</div>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+       <title>Quoting Dojo</title>
+    </head>
+
+    <body>
+      <h1>Quoting Dojo </h1>
+      <h3>Fill in the Following</h3>
+      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+      <form action='/users' method='post' id="users">
+          Your Name: <input type='text' name='name'>
+
+          Age: <input type="text" name='age'>
+
+          <input type='submit' value='submit!'>
+      </form>
+      <div id="all_users">
+        <% for (let i in users) { %>
+        <%= users[i].name %>
+        <%= users[i].age %>
+        <% } %>
+
+      </div>
+    </body>
+</html>

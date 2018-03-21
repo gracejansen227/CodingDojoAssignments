@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hunting Github</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <button id="get"> click this to show name</button>
+
+    <div id="name">
+
+    </div>
+
+    <script>
+      var button = document.getElementById("get");
+      var name = button.addEventListener("click", function(){ $.get("https://api.github.com/users/gracejansen227", displayName)})
+
+      function displayName(data) {
+        console.log(data);
+      console.log(data.login);
+      $("#name").append("<h1>" + data.login + "</h1>");
+}
+
+    </script>
+  </body>
+</html>

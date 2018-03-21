@@ -1,0 +1,30 @@
+<html>
+    <head>
+       <title>Dojo Survey</title>
+    </head>
+    
+    <body>
+      <h1>Dojo Survey</h1>
+      <h3>Fill in the Following</h3>
+      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+      <form action='/info' method='post'>
+          Your Name: <input type='text' name='name'>
+
+        Dojo Location:  <select name='location'>
+                          <option value="Dallas">Dallas</option>
+                          <option value="Silicon Valley">Silicon Valley</option>
+                          <option value="Los Angeles">Los Angeles</option>
+                          <option value="Paris">Paris</option>
+                        </select>
+        Favorite Language: <select name='language'>
+                            <option value="Python">Python</option>
+                            <option value="Javascript">Javascript</option>
+                            <option value="Django">Django</option>
+                            <option value="mySQL">mySQL</option>
+                          </select>
+          Comment (optional): <textarea name='comment'></textarea>
+
+          <input type='submit' value='getinfo'>
+      </form>
+    </body>
+</html>

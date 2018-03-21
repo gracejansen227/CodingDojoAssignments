@@ -1,0 +1,30 @@
+<html>
+    <head>
+       <title>TOTALLY DIDN'T COPY THE FILES FROM MY OTHER DOJO SERVEY HEH HEH HEH </title>
+       {% load static %}
+       <link rel="stylesheet" href="{% static 'session_words/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+{% load static %}
+     </head>
+    </head>
+
+    <body>
+      <h1>Add a new word</h1>
+
+      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+      <form action="/session_words/add" method='post'>
+        {% csrf_token %}
+         <input type='text' name='word'>
+
+        Choose a color:  <input type="radio" name="color" value="blue">blue
+                        <input type="radio" name="color" value="purple">purple
+                        <input type="radio" name="color" value="pink">pink
+
+
+        show in BIG fonts <input type="checkbox" name="big" value="big">
+                          
+
+          {% csrf_token %}
+          <input type='submit' value='Add to Session'>
+      </form>
+    </body>
+</html>

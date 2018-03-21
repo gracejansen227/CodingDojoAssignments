@@ -1,0 +1,36 @@
+  <html>
+      <head>
+          <meta charset="utf-8">
+          <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+          <title> Users Index </title>
+      </head>
+      <body>
+          <div id="wrapper">
+          <h1> Users </h1>
+
+          <table id="users">
+            <tr>
+              <th>id</th>
+              <th> Full Name</th>
+              <th> Created At </th>
+              <th> Actions </th>
+            </tr>
+            {% for user in all_users %}
+            <tr>
+              <td>{{ user['user_id']}}</td>
+              <td><a href="/users/{{user['user_id']}}">{{ user['first_name']}} {{ user['last_name']}}</a></td>
+              <td>{{ user['created_at'].strftime(' %b %d, %Y %H:%M %p')}}</td>
+              <td> <a href="/users/{{user['user_id']}}">Show</a>
+                 <a href="/users/{{user['user_id']}}/showedit">Edit </a>
+                  <a href="/users/{{user['user_id']}}/delete">Delete</a> </td>
+            </tr>
+            {% endfor %}
+
+
+          </table>
+
+          <a href="/users/new"> Add a new user</a>
+
+          </div>
+      </body>
+  </html>

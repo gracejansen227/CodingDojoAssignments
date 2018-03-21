@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> New User</title>
+  </head>
+  <body>
+    <div id="wrapper">
+    <h1> Add a new user </h1>
+
+    <form action="/first_app/create" method="post">
+        {% csrf_token %}
+      First name: <input name="first_name" type="text">
+      Last name: <input name="last_name" type="text">
+      Title: <input name="title" type="text">
+      Company: <input name="company" type="text">
+      Address: <input name="address1" type="text">
+      Address 2: <input name="address2" type="text">
+      City: <input name="city" type="text">
+      State: <input name="state" type="text">
+      Zip Code: <input name="state" type="text">
+      Email: <input name="email" type="text">
+      Website: <input name="website" type="text">
+      Instagram: <input name="instagram" type="text">
+      LinkedIn: <input name="linkedin" type="text">
+      Facebook: <input name="facebook" type="text">
+
+      What will you use this card for?
+      <label class="container">Social
+      <input type="checkbox" value="social">
+      <span class="checkmark"></span>
+      </label>
+      <label class="container">Business
+      <input type="checkbox" value="business">
+      <span class="checkmark"></span>
+      </label>
+
+    <input type="submit" value="Create">
+  </form>
+
+    <a href="/test_app/admin_dash"> Go Back</a>
+  </div>
+  </body>
+</html>

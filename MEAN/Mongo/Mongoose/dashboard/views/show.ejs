@@ -1,0 +1,47 @@
+<html>
+    <head>
+       <title>Show this Babayy!</title>
+       <style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+    </head>
+
+    <body>
+      <h1> Show this bebe (pronounced: "BEH-beh") </h1>
+      <h3>Here is a beautiful list of all da kinds of bebes we have for rent.</h3>
+
+      <table>
+        <tr>
+        <th>Type </th>
+        <th> Name </th>
+        <th> Food</th>
+      </tr>
+
+        <tr>
+          <td> <%= baby[0].type %> </td>
+          <td><%= baby[0].name %> </td>
+          <td> <%= baby[0].food %></td>
+        </tr>
+
+      </table>
+      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+      <a href='/'>
+        Back to Dashboard
+      </a>
+
+    </body>
+</html>
