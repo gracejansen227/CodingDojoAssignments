@@ -1,0 +1,18 @@
+<div style="text-align:center">
+<ul>
+  <li>
+    <h2><a [routerLink]="['']"> Home </a></h2>
+  </li>
+</ul>
+
+<h3> EDIT this one!
+<form (submit)="onEditAuthor($event)" class="postForm">
+  <p> {{author['name'] | json}}</p>
+  <label> Edit name:
+    <input type="text" name="name" [(ngModel)]="author['name']" />
+  </label>
+
+  <input type="submit" value="Submit" />
+</form>
+</h3>
+</div>

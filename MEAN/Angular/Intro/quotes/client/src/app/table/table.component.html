@@ -1,0 +1,22 @@
+
+
+<div style="text-align:center">
+<ul>
+  <li>
+    <h2><a [routerLink]="['new']"> Add an Author </a></h2>
+  </li>
+</ul>
+
+<h3> We have quotes by: </h3>
+<table>
+  <tr>
+    <th>Author</th>
+    <th>Actions Available</th>
+  </tr>
+  <tr *ngFor="let author of authors" >
+    <td>{{author.name}}</td>
+  <td>
+  <button (click)="onEdit(author)">Edit</button>
+  <button (click)="onView(author)">View quotes</button></td></tr>
+</table>
+</div>

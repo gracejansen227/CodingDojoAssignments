@@ -1,0 +1,51 @@
+
+
+<div>
+<h2> Create a New Product </h2>
+<form (submit)="onSubmitNew($event)"
+class="postForm"
+#form="ngForm">
+  <p> {{product | json}}</p>
+  <label> Title:
+    <input
+    type="text"
+    name="product.title"
+    [(ngModel)]="product.title"
+    required
+    #title="ngModel"
+    />
+  </label>
+
+  <label> Price:
+    <input
+    type="number"
+    name="product.price"
+    [(ngModel)]="product.price"
+    required
+    #price="ngModel"
+    />
+  </label>
+
+  <label> Image url:
+    <input
+    type="text"
+    name="product.url"
+    [(ngModel)]="product.url"
+    #url="ngModel"
+    />
+  </label>
+  <h3>
+    {{title_error}} </h3>
+    <h3>
+    {{price_error}}
+  </h3>
+
+  <!-- <small
+    class="errors"
+    [hidden]="author.name.valid || (author.name.untouched && !form.submitted)">
+    Name is required (miniumum character length of 2).
+  </small> -->
+
+  <input type="submit" value="Submit" />
+</form>
+</div>

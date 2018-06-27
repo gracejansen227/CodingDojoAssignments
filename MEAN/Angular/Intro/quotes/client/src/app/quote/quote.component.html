@@ -1,0 +1,35 @@
+
+<ul>
+  <li>
+    <h2><a [routerLink]="['']"> Home </a></h2>
+  </li>
+</ul>
+
+
+<h2> Provide a quote by {{author}} </h2>
+<form (submit)="onSubmitNewQuote($event)"
+class="postForm"
+#form="ngForm">
+  <p> {{quote.content | json}}</p>
+  <label> Quote:
+    <input
+    type="text"
+    name="quote.content"
+    [(ngModel)]="quote.content"
+    required
+    minlength="3"
+    #content="ngModel"
+    />
+  </label>
+  <h3>
+    {{error}} </h3>
+
+  <!-- <small
+    class="errors"
+    [hidden]="quote.content.valid || (quote.content.untouched && !form.submitted)">
+    Name is required (miniumum character length of 2).
+  </small> -->
+
+  <input type="submit" value="Submit" />
+  <input value="Cancel" />
+</form>

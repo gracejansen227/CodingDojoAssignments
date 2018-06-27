@@ -1,0 +1,34 @@
+
+<ul>
+  <li>
+    <h2><a [routerLink]="['']"> Home </a></h2>
+  </li>
+</ul>
+
+
+<h2> Add a new quotable author: </h2>
+<form (submit)="onSubmitNew($event)"
+class="postForm"
+#form="ngForm">
+  <p> {{author | json}}</p>
+  <label> Name:
+    <input
+    type="text"
+    name="author.name"
+    [(ngModel)]="author.name"
+    required
+    minlength="2"
+    maxlength="30"
+    #name="ngModel"
+    />
+  </label>
+  <h3>
+    {{error}} </h3>
+  <!-- <small
+    class="errors"
+    [hidden]="author.name.valid || (author.name.untouched && !form.submitted)">
+    Name is required (miniumum character length of 2).
+  </small> -->
+
+  <input type="submit" value="Submit" />
+</form>

@@ -1,0 +1,37 @@
+Create a Javascript file and place all of your solutions in it.
+
+Strip the myState object into two arrays, one filled with its keys, the other with its values.
+
+_.keys(myState)
+
+_.values(myState)
+
+Using these two new arrays, put them back together as an object to resemble the original myState object.
+
+var arr = _.zip(one, two);
+
+Alert each of the key - value pairs of the myState object.
+
+_.each(myState, function(value, key){ alert(key+': '+value); });
+
+Return just the names of the businesses from the businesses array.
+
+var businessNames = _.pluck(businesses, 'name');
+
+Return the object containing “Microsoft”.
+
+var thisobject = _.where(businesses, {name: "Microsoft"});
+
+
+Return all the businesses that are located in Bellevue in a new array.
+
+var bell = _.where(businesses, {city: "Bellevue"});
+
+
+Sort the businesses based on the city in ascending order and return the array.
+
+var sorted = _.sortBy(businesses, 'city');
+
+Have all the business names be “Coding Dojo” without altering the original array. [hint: use _.map()]
+
+_.map(businesses, function(t)_.where{name: 'Coding Dojo'; });

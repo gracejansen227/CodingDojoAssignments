@@ -1,0 +1,14 @@
+<div style="text-align:center">
+
+<h3> Product List </h3>
+  <div *ngFor="let product of products" >
+    <div id="products">
+    <img src="{{product.url}}">
+{{product.title}}
+{{product.price}}
+
+  <button (click)="onEdit(product)">Edit</button>
+  <button (click)="onButtonClickDelete(product._id)">Delete</button>
+</div>
+</div>
+</div>

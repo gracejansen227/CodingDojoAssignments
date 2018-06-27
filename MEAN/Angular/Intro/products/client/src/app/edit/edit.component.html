@@ -1,0 +1,27 @@
+<div style="text-align:center">
+
+
+<h3> Edit Product </h3>
+<form (submit)="onEditProduct($event)" class="postForm"
+#form="ngForm">
+  <p> {{product | json}}</p>
+  <label> Title:
+    <input type="text" name="title" [(ngModel)]= "product.title" />
+  </label>
+  <label> Price:
+    <input type="text" name="price" [(ngModel)]="product.price" />
+  </label>
+  <label> Image url:
+    <input type="text" name="url" [(ngModel)]="product.url" />
+  </label>
+
+  <h3>
+    {{title_error}} </h3>
+    <h3>
+    {{price_error}}
+  </h3>
+
+  <input type="submit" value="Update" />
+</form>
+
+</div>

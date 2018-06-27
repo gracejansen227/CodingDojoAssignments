@@ -29,6 +29,7 @@ mine(){
     this.currentVal = 0;
   }
   this.currentVal++;
+  this.totalCoins++;
   console.log("do we get here?");
   console.log(this.currentVal);
   this.random_id = this.makeID();
@@ -36,15 +37,20 @@ mine(){
   console.log("are the ledgers even working",this.ledgers)
 }
 
-buy(){
+buy(amount){
   this.currentVal++;
+  console.log("does this get out the currentVal", this.currentVal);
   this.random_id = this.makeID();
-  this.ledgers.push({id: this.random_id, action: 'Bought', amount: '1', value: this.currentVal});
+  this.ledgers.push({id: this.random_id, action: 'Bought', amount: amount, value: this.currentVal});
+  this.totalCoins += amount;
 }
 
-sell(){
+sell(amount){
+  this.currentVal--;
+  console.log("does this work", this.currentVal);
   this.random_id = this.makeID();
-  this.ledgers.push({id: this.random_id, action: 'Sold', amount: '1', value: this.currentVal});
+  this.totalCoins -= amount;
+  this.ledgers.push({id: this.random_id, action: 'Sold', amount: amount, value: this.currentVal});
 }
 
 showCurrentVal(){
@@ -54,10 +60,20 @@ showCurrentVal(){
 }
 
 showTotalCoins(){
+  if (this.totalCoins == null){
+    this.totalCoins = 0;
+  }
   console.log(this.totalCoins);
   return this.totalCoins;
 }
 
+showLedgers(){
+  console.log(this.ledgers);
+  return this.ledgers;
+}
 
+findOne(i){
+  return this.ledgers[i];
+}
 
 }

@@ -9,10 +9,10 @@
     <th>Value</th>
     <th> </th>
   </tr>
-  <tr *ngFor="let ledger of ledgers" >
+  <tr *ngFor="let ledger of ledgers; let i = index" >
     <td>{{ledger.action}}</td>
     <td>{{ledger.amount}}</td>
     <td>{{ledger.value}}</td>
-    <td><button (click)="onButtonClickDetails(ledger.id)">Details</button></td>
+    <td><button (click)="onButtonClickDetails(i)">Details</button></td>
   </tr>
 </table>

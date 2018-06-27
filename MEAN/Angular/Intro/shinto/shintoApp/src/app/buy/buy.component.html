@@ -6,7 +6,7 @@ Buy ShintoCoins </h1>
 
 <h2> Number of ShintoCoins Owned: {{totalCoins}} </h2>
 
-<form (submit)="onBuy()" class="postForm">
+<form (submit)="onBuy($event)" class="postForm">
 
     <input type="text" name="amount" [(ngModel)]="amount" value="Number"/>
   <input type="submit" value="Buy" />

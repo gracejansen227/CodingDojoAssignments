@@ -15,7 +15,7 @@ export class BuyComponent implements OnInit {
 
   ngOnInit() {
   this.showInfo();
-  this.amount = 0;
+  // this.amount = 0;
   }
 
 showInfo(){
@@ -24,12 +24,15 @@ showInfo(){
 
   }
 
-onBuy(){
+onBuy(event){
   event.preventDefault();
   console.log("add this shit later");
+  this.amount = Number(this.amount);
+  console.log(this.amount);
   if (this.amount > 0){
   this.totalCoins = this.totalCoins + this.amount;
-  this._httpService.buy();
+  this._httpService.buy(this.amount);
+  this.currentVal = this._httpService.showCurrentVal();
 }else {
   console.log("cannot buy something for negative or no money!");
 }

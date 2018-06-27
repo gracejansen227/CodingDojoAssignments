@@ -1,14 +1,14 @@
 <h1>
 Sell ShintoCoins </h1>
 
-<h2> Current ShintoCoin Value: #currentvalue
+<h2> Current ShintoCoin Value:  {{currentVal}}
 </h2>
 
-<h2> Number of ShintoCoins Owned #fillintotal </h2>
+<h2> Number of ShintoCoins Owned: {{totalCoins}} </h2>
 
-<form (submit)="onSell()" class="postForm">
+<form (submit)="onSell($event)" class="postForm">
 
-    <input type="text" name="newSell.sell_amount" [(ngModel)]="newSell.sell_amount" value="Number"/>
-  <input type="submit" value="Buy" />
+    <input type="text" name="amount" [(ngModel)]="amount" value="Number"/>
+  <input type="submit" value="sell" />
 
 </form>

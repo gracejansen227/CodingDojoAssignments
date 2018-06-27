@@ -24,6 +24,7 @@ export class ChicagoComponent implements OnInit {
         console.log("does this work", data.weather[0].description)
          this.weather = data;
      });
+     
 
   }
 
